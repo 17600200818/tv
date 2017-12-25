@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 //Route::post('/movie/create', 'MovieController@apiStore');
+Route::resource('movies', 'MoviesController');
