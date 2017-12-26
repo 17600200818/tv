@@ -33,6 +33,7 @@ class Movie extends Migration
             $table->string('film_length')->nullable();
             $table->string('director')->nullable();
             $table->text('cast')->nullable();
+            $table->string('douban_score')->nullable();
             $table->integer('is_banner')->default(0);
             $table->integer('is_small')->default(0);
             $table->integer('is_good')->default(0);
