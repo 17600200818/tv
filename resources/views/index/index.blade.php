@@ -74,19 +74,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="slider">
             <div class="callbacks_container">
                 <ul class="rslides" id="slider">
-                    <li><img src="/moban/images/banner.jpg" class="img-responsive" alt=""/>
+                    <li><img src="/moban/images/banner.jpg" class="img-responsive" alt="test ceshi"/>
                         <div class="button">
-                            <a href="#" class="hvr-shutter-out-horizontal">Watch Now</a>
+                            <a href="{{ route('movies.show', $banners[0]->id) }}" class="hvr-shutter-out-horizontal">下 载</a>
                         </div>
                     </li>
                     <li><img src="/moban/images/banner1.jpg" class="img-responsive" alt=""/>
                         <div class="button">
-                            <a href="#" class="hvr-shutter-out-horizontal">Watch Now</a>
+                            <a href="{{ route('movies.show', $banners[1]->id) }}" class="hvr-shutter-out-horizontal">下 载</a>
                         </div>
                     </li>
                     <li><img src="/moban/images/banner2.jpg" class="img-responsive" alt=""/>
                         <div class="button">
-                            <a href="#" class="hvr-shutter-out-horizontal">Watch Now</a>
+                            <a href="{{ route('movies.show', $banners[2]->id) }}" class="hvr-shutter-out-horizontal">下 载</a>
                         </div>
                     </li>
                 </ul>
@@ -136,13 +136,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </div>
                             </a>
                                 <div class="grid_2 col_1">
-                                    <img src="/moban/images/pic8.jpg" class="img-responsive" alt=""/>
+                                    <a href="{{ route('movies.show', $smalls[0]->id) }}"><img src="/moban/images/pic8.jpg" class="img-responsive" alt=""/></a>
                                     <div class="caption1">
                                         <ul class="list_3">
                                             {{--<li><i class="icon5"> </i><p>3,548</p></li>--}}
                                         </ul>
                                         {{--<i class="icon4"> </i>--}}
-                                        <p class="m_3">Guardians of the Galaxy</p>
+                                        <p class="m_3">{{ $smalls[0]->name }}</p>
                                     </div>
                                 </div>
                         </div>
@@ -164,7 +164,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="clearfix"> </div>
                     </div>
                     <div class="row_2">
-                        <a href="single.html"><img src="/moban/images/banner1.jpg" class="img-responsive" alt=""/></a>
+                        <a href="{{ route('movies.show', $banners[3]->id) }}"><img src="/moban/images/banner1.jpg" class="img-responsive" alt=""/></a>
                     </div>
                 </div>
                 <div class="col-md-5 content_right">
@@ -211,7 +211,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                             </div>
                         </div>
-                        <div class="col-md-6 m_6"><a href="single.html">
+                        <div class="col-md-6 m_6"><a href="{{ route('movies.show', $smalls[1]->id) }}">
                                 <img src="/moban/images/pic8.jpg" class="img-responsive" alt=""/>
                             </a></div>
                     </div>
