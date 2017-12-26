@@ -43,7 +43,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="col-md-9 movie_box">
                     <div class="grid images_3_of_2">
                         <div class="movie_image">
-                            <span class="movie_rating">5.0</span>
+                            <span class="movie_rating">{{ $movie->douban_score }}</span>
                             <img src="{{ $movie->cover }}" class="img-responsive" alt=""/>
                         </div>
                         <div class="movie_rate">

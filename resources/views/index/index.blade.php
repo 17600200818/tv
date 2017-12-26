@@ -74,17 +74,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="slider">
             <div class="callbacks_container">
                 <ul class="rslides" id="slider">
-                    <li><img src="/moban/images/banner.jpg" class="img-responsive" alt="test ceshi"/>
+                    <li><img src="{{ $banners[0]->banner_url }}" class="img-responsive" alt="test ceshi"/>
                         <div class="button">
                             <a href="{{ route('movies.show', $banners[0]->id) }}" class="hvr-shutter-out-horizontal">下 载</a>
                         </div>
                     </li>
-                    <li><img src="/moban/images/banner1.jpg" class="img-responsive" alt=""/>
+                    <li><img src="{{ $banners[1]->banner_url }}" class="img-responsive" alt=""/>
                         <div class="button">
                             <a href="{{ route('movies.show', $banners[1]->id) }}" class="hvr-shutter-out-horizontal">下 载</a>
                         </div>
                     </li>
-                    <li><img src="/moban/images/banner2.jpg" class="img-responsive" alt=""/>
+                    <li><img src="{{ $banners[2]->banner_url }}" class="img-responsive" alt=""/>
                         <div class="button">
                             <a href="{{ route('movies.show', $banners[2]->id) }}" class="hvr-shutter-out-horizontal">下 载</a>
                         </div>
@@ -164,7 +164,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="clearfix"> </div>
                     </div>
                     <div class="row_2">
-                        <a href="{{ route('movies.show', $banners[3]->id) }}"><img src="/moban/images/banner1.jpg" class="img-responsive" alt=""/></a>
+                        <a href="{{ route('movies.show', $banners[3]->id) }}"><img src="{{ $banners[3]->banner_url }}" class="img-responsive" alt=""/></a>
                     </div>
                 </div>
                 <div class="col-md-5 content_right">
