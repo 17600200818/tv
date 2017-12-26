@@ -16,10 +16,21 @@ class Movie extends Migration
         Schema::create('movies', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('cover');
-            $table->string('image');
-            $table->longText('introduction');
+            $table->string('cover')->nullable();
+            $table->string('image')->nullable();
+            $table->longText('introduction')->nullable();
             $table->string('download');
+            $table->string('realname')->nullable();
+            $table->integer('year')->nullable();
+            $table->string('place')->nullable();
+            $table->string('category')->nullable();
+            $table->string('language')->nullable();
+            $table->string('subtitle')->nullable();
+            $table->string('file_format')->nullable();
+            $table->string('video_size')->nullable();
+            $table->string('film_length')->nullable();
+            $table->string('director')->nullable();
+            $table->text('cast')->nullable();
             $table->timestamps();
         });
     }
