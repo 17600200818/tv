@@ -18,6 +18,8 @@ class Movie extends Migration
             $table->string('name');
             $table->string('cover')->nullable();
             $table->string('image')->nullable();
+            $table->string('banner_url')->nullable();
+            $table->string('small_url')->nullable();
             $table->longText('introduction')->nullable();
             $table->string('download');
             $table->string('realname')->nullable();
@@ -31,6 +33,9 @@ class Movie extends Migration
             $table->string('film_length')->nullable();
             $table->string('director')->nullable();
             $table->text('cast')->nullable();
+            $table->integer('is_banner')->default(0);
+            $table->integer('is_small')->default(0);
+            $table->integer('is_good')->default(0);
             $table->timestamps();
         });
     }
