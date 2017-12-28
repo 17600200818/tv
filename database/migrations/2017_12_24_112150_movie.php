@@ -22,6 +22,7 @@ class Movie extends Migration
             $table->string('small_url')->nullable();
             $table->longText('introduction')->nullable();
             $table->string('download');
+            $table->string('thunder')->nullable();
             $table->string('realname')->nullable();
             $table->integer('year')->nullable();
             $table->string('place')->nullable();

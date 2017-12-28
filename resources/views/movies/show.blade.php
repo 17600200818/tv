@@ -10,7 +10,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link href="/moban/css/bootstrap.css" rel='stylesheet' type='text/css' />
     <link href="/moban/css/style.css" rel="stylesheet" type="text/css" media="all" />
     <!-- start plugins -->
-    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/moban/js/jquery-1.11.1.min.js"></script>
+    {{--迅雷下载script--}}
+    <script src="http://dl.pconline.com.cn/js/thunderhref.js"></script>
     <link href='http://fonts.useso.com/css?family=Roboto+Condensed:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -79,7 +81,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         {{--<div class="down_btn"><a class="btn1" href="{{ $movie->download }}"><span> </span>迅雷下载</a></div>--}}
                     </div>
                     <div class="clearfix"> </div>
-                    下载地址 : <a href="#">{{ $movie->download }}</a>
+                    下载地址 : <a oncontextmenu=ThunderNetwork_SetHref(this) class='aThunder' onclick="return OnDownloadClick_Simple(this)" href="{{ $movie->download }}" thunderResTitle="迅雷下载" thunderType="04" thunderPid="21319" thunderHref="{{ $movie->download }}">迅雷下载</a>
                     <p class="m_4">{{ $movie->introduction }}</p>
                     <form method="post" action="contact-post.html">
                         <div class="to">
