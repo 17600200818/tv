@@ -78,11 +78,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <p class="movie_option"><strong>类别: </strong>　{{ $movie->category }}</p>
                         <p class="movie_option"><strong>导演: </strong>　{{ $movie->director }}</p>
                         <p class="movie_option"><strong>演员: </strong>　{{$movie->cast}}</p>
-                        {{--<div class="down_btn"><a class="btn1" href="{{ $movie->download }}"><span> </span>迅雷下载</a></div>--}}
+                        <div class="down_btn"><a class="btn1" oncontextmenu=ThunderNetwork_SetHref(this) onclick="return OnDownloadClick_Simple(this)" href="{{ $movie->thunder }}" thunderResTitle="迅雷下载" thunderType="04" thunderPid="00008" thunderHref="{{ $movie->thunder }}"><span> </span>迅雷下载</a></div>
                     </div>
                     <div class="clearfix"> </div>
-                    下载地址 : <a oncontextmenu=ThunderNetwork_SetHref(this) class='aThunder' onclick="return OnDownloadClick_Simple(this)" href="{{ $movie->download }}" thunderResTitle="迅雷下载" thunderType="04" thunderPid="21319" thunderHref="{{ $movie->download }}">迅雷下载</a>
-                    <p class="m_4">{{ $movie->introduction }}</p>
+                    迅雷下载地址 : <a oncontextmenu=ThunderNetwork_SetHref(this) class=aThunder onclick="return OnDownloadClick_Simple(this)" href="{{ $movie->thunder }}" thunderResTitle="迅雷下载" thunderType="04" thunderPid="00008" thunderHref="{{ $movie->thunder }}">{{ $movie->download }}</a>
+                    <p class="m_4">{!! $movie->introduction !!}</p>
                     <form method="post" action="contact-post.html">
                         <div class="to">
                             <input type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
@@ -151,35 +151,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="movie_img"><div class="grid_2">
+                    <div class="movie_img">
+                        <div class="grid_2">
+                            <a href="{{ route('movies.show', $smallMovies[0]->id) }}">
                             <img src="/moban/images/pic6.jpg" class="img-responsive" alt="">
+                            </a>
                             <div class="caption1">
                                 <ul class="list_5 list_7">
-                                    <li><i class="icon5"> </i><p>3,548</p></li>
+                                    <li><span style="color: white">{{ $smallMovies[0]->douban_score }}</span></li>
                                 </ul>
                                 <i class="icon4 icon6 icon7"> </i>
-                                <p class="m_3">Guardians of the Galaxy</p>
+                                <p class="m_3">{{ $smallMovies[0]->name }}</p>
                             </div>
                         </div>
                     </div>
                     <div class="grid_2 col_1">
-                        <img src="/moban/images/pic2.jpg" class="img-responsive" alt="">
+                        <a href="{{ route('movies.show', $smallMovies[1]->id) }}">
+                            <img src="/moban/images/pic2.jpg" class="img-responsive" alt="">
+                        </a>
                         <div class="caption1">
                             <ul class="list_3 list_7">
-                                <li><i class="icon5"> </i><p>3,548</p></li>
+                                <li><span style="color: white">{{ $smallMovies[1]->douban_score }}</span></li>
                             </ul>
                             <i class="icon4 icon7"> </i>
-                            <p class="m_3">Guardians of the Galaxy</p>
+                            <p class="m_3">{{ $smallMovies[1]->name }}</p>
                         </div>
                     </div>
                     <div class="grid_2 col_1">
-                        <img src="/moban/images/pic9.jpg" class="img-responsive" alt="">
+                        <a href="{{ route('movies.show', $smallMovies[2]->id) }}">
+                            <img src="/moban/images/pic9.jpg" class="img-responsive" alt="">
+                        </a>
                         <div class="caption1">
                             <ul class="list_3 list_7">
-                                <li><i class="icon5"> </i><p>3,548</p></li>
+                                <li><span style="color: white">{{ $smallMovies[2]->douban_score }}</span></li>
                             </ul>
                             <i class="icon4 icon7"> </i>
-                            <p class="m_3">Guardians of the Galaxy</p>
+                            <p class="m_3">{{ $smallMovies[2]->name }}</p>
                         </div>
                     </div>
                 </div>

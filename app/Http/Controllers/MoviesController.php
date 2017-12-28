@@ -15,6 +15,7 @@ class MoviesController extends Controller
 
     public function show(Movie $movie)
     {
-        return view('movies.show', compact('movie'));
+        $smallMovies = Movie::where('is_small', 1)->limit(3)->orderBy('id', 'desc')->get();
+        return view('movies.show', compact('movie', 'smallMovies'));
     }
 }
